@@ -16,17 +16,16 @@ function handleCustomCommand(
 			message: "Only a player can run a LCommand.",
 		};
 
-	try {
-		profile.callback({
-			source,
-			params: args,
-		});
-	} catch (error) {
-		return {
-			status: mc.CustomCommandStatus.Failure,
-			message: `Failed to run a LCommand: ${error}`,
-		};
-	}
+	mc.system.run(() => {
+		try {
+			profile.callback({
+				source,
+				params: args,
+			});
+		} catch (error) {
+			source.sendMessage(`§cFailed to run a LCommand: ${error}`);
+		}
+	});
 
 	return {
 		status: mc.CustomCommandStatus.Success,
@@ -91,12 +90,14 @@ mc.world.beforeEvents.chatSend.subscribe((e) => {
 
 	e.cancel = true;
 
-	try {
-		profile.callback({
-			source: e.sender,
-			params: [],
-		});
-	} catch (error) {
-		e.sender.sendMessage(`§cFailed to run a LCommand: ${error}`);
-	}
+	mc.system.run(() => {
+		try {
+			profile.callback({
+				source: e.sender,
+				params: [],
+			});
+		} catch (error) {
+			e.sender.sendMessage(`§cFailed to run a LCommand: ${error}`);
+		}
+	});
 });
