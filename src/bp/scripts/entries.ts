@@ -8,9 +8,10 @@ registerProfile({
 
 		if (currentNv) {
 			arg.source.removeEffect("night_vision");
-			return;
+		} else {
+			arg.source.runCommand("effect @s night_vision infinite 1 true"); // infinite duration is only available via command
 		}
 
-		arg.source.runCommand("effect @s night_vision infinite 1 true"); // infinite duration is only available via command
+		arg.source.sendMessage("Toggled the night vision effect.");
 	},
 });
