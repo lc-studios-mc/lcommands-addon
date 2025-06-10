@@ -8,6 +8,6 @@
 	"editor.insertSpaces": false,
 	"files.eol": "\n",
 	"search.exclude": {
-		"dist": true,
+		"dist": true
 	}
 }
