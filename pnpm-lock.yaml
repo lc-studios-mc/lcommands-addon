@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@minecraft/server':
+        specifier: 2.0.0-beta.1.21.80-stable
+        version: 2.0.0-beta.1.21.80-stable(@minecraft/vanilla-data@1.21.81)
     devDependencies:
       '@lc-studios-mc/mcr':
         specifier: github:lc-studios-mc/mcr#v0.0.2
@@ -192,6 +196,17 @@ packages:
     version: 0.0.1
     engines: {node: '>= 22'}
     hasBin: true
+
+  '@minecraft/common@1.2.0':
+    resolution: {integrity: sha512-JdmEq4P3Z/FtoBzhLijFgMSVFnFRrUoLwY8DHHrgtFo0mfLTOLTB1RErYjLMsA6b7BGVNxkX/pfFRiH7QZ0XwQ==}
+
+  '@minecraft/server@2.0.0-beta.1.21.80-stable':
+    resolution: {integrity: sha512-pA5vTV25etB2wywkpK0O7dU1X2DRvs6aeWZlRdlGpNDXPKBQC+3c+fnwwEZadxXqsbvUkXmU8LY0IZlc25pTkg==}
+    peerDependencies:
+      '@minecraft/vanilla-data': '>=1.20.70'
+
+  '@minecraft/vanilla-data@1.21.81':
+    resolution: {integrity: sha512-YODTWnkEiFc9VjKOGOuLXZZQpkLQw9EIsxAoHtBT+K8huDv5nWLheX5hc1Z9OqY/+iFaIT7ueJNfBbXW/WOF1A==}
 
   ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
@@ -537,6 +552,15 @@ snapshots:
       zod: 3.25.57
     transitivePeerDependencies:
       - typescript
+
+  '@minecraft/common@1.2.0': {}
+
+  '@minecraft/server@2.0.0-beta.1.21.80-stable(@minecraft/vanilla-data@1.21.81)':
+    dependencies:
+      '@minecraft/common': 1.2.0
+      '@minecraft/vanilla-data': 1.21.81
+
+  '@minecraft/vanilla-data@1.21.81': {}
 
   ansi-regex@5.0.1: {}
 
