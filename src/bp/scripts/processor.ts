@@ -13,7 +13,7 @@ function handleCustomCommand(
 	if (!(source && source instanceof mc.Player))
 		return {
 			status: mc.CustomCommandStatus.Failure,
-			message: "Only a player can run a LCommand.",
+			message: "Only a player can run an LCommand.",
 		};
 
 	mc.system.run(() => {
@@ -23,7 +23,7 @@ function handleCustomCommand(
 				params: args,
 			});
 		} catch (error) {
-			source.sendMessage(`§cFailed to run a LCommand: ${error}`);
+			source.sendMessage(`§cFailed to run an LCommand: ${error}`);
 		}
 	});
 
@@ -97,7 +97,7 @@ mc.world.beforeEvents.chatSend.subscribe((e) => {
 				params: [],
 			});
 		} catch (error) {
-			e.sender.sendMessage(`§cFailed to run a LCommand: ${error}`);
+			e.sender.sendMessage(`§cFailed to run an LCommand: ${error}`);
 		}
 	});
 });
