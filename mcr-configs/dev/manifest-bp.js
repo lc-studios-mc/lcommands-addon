@@ -9,16 +9,24 @@ export default {
 	},
 	modules: [
 		{
-			description: "Example vanilla behavior pack",
+			description: "Behavior pack",
 			type: "data",
 			uuid: "3baeb093-b302-433f-a031-d4aaa59796e2",
 			version: [0, 0, 1],
 		},
+		{
+			description: "Scripts",
+			language: "javascript",
+			type: "script",
+			uuid: "8b88868f-a886-4391-a390-068d26a77aa6",
+			version: [0, 0, 1],
+			entry: "scripts/main.js",
+		},
 	],
 	dependencies: [
 		{
-			uuid: "2463c1f8-7117-4f2c-84f1-936f9bbf087f",
-			version: [0, 0, 1],
+			module_name: "@minecraft/server",
+			version: "2.0.0-beta",
 		},
 	],
 };
