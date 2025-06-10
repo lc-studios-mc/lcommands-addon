@@ -1,4 +1,4 @@
-import { registerProfile } from "./profile_registry";
+import { registerProfile } from "../profile_registry";
 
 registerProfile({
 	names: ["v", "vv", "v1"],
