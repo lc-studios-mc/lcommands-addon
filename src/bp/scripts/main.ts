@@ -1,2 +1,2 @@
-import "./register_entries"; // Register entries first
+import "./entries"; // Register entries first
 import "./processor";
