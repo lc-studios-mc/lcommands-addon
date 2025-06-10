@@ -1,0 +1,4 @@
+node_modules/
+*-lock.*
+*.animation.json
+*.geo.json

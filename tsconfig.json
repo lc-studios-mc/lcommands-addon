@@ -1,0 +1,26 @@
+{
+	"compilerOptions": {
+		"target": "es2023",
+		"lib": ["es2023"],
+		"moduleDetection": "force",
+		"module": "preserve",
+		"rootDir": "src/bp/scripts",
+		"paths": {
+			"@/*": ["./src/bp/scripts/*"]
+		},
+		"moduleResolution": "bundler",
+		"resolveJsonModule": true,
+		"allowJs": true,
+		"skipLibCheck": true,
+		"noEmit": true,
+		"isolatedModules": true,
+		"verbatimModuleSyntax": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+
+		"strict": true,
+		"noUncheckedIndexedAccess": true,
+		"noImplicitOverride": true
+	},
+	"include": ["src/bp/scripts/**/*"]
+}

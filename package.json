@@ -1,0 +1,16 @@
+{
+	"name": "lcommands",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"format": "prettier --write .",
+		"types": "tsc --noEmit",
+		"dev": "mcr build -c mcr-configs/dev/index.js"
+	},
+	"devDependencies": {
+		"@lc-studios-mc/mcr": "github:lc-studios-mc/mcr#v0.0.2",
+		"prettier": "^3.5.3",
+		"typescript": "^5.8.3"
+	}
+}
